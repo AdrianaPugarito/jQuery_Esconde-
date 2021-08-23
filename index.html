@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- CDN jQuery 3.6.0 min -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <title>jQuery - Esconde texto</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <button id="hide">Esconder</button>
+    <button id="show">Exibir</button>
+    <button id="toggle">Alternar</button>
+    <br>
+    <p>So clicar no botao para esconder ou exibir esse paragrafo</p>
+
+    <script>
+      // $(document).ready(function(){})
+      $(document).ready(function(){
+
+        //funcao esconder
+        $("#hide").click(aoClicarExecutaAqui)
+
+        function aoClicarExecutaAqui(){
+          $("p").hide()
+        }
+        
+        $("#show").click(function(){
+          $("p").show()
+        })
+
+
+        $("#toggle").click(function(){
+          // $("p").slideToggle(3000)
+          $("p").slideToggle("slow")
+        })
+
+
+      })
+
+
+
+    </script>
+
+
+
+
+    
+  </body>
+</html>
